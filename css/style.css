@@ -38,6 +38,7 @@ div.callout {
 
 body {
 	background-color: #1d252e;
+	min-width: 600px;
 }
 
 .container {
@@ -55,6 +56,21 @@ body {
 	flex: none !important;
 	height: 867px;
 	border-right: 4px solid #212830;
+}
+
+@media only screen and 
+(max-width: 910px) {
+	.left-menu {
+		display: none;
+	}
+
+	.chat-board, .chat-box {
+		left: 0 !important;
+	}
+
+	.menu {
+		/*z-index: 99999999;*/
+	}
 }
 
 .navigation {
@@ -209,6 +225,9 @@ body {
 .chat-type {
 	font-size: 24px;
 	color: #9c9fa3;
+	position: fixed;
+	right: 200px;
+	top: 15px;
 }
 
 .chat-phone {
@@ -221,6 +240,12 @@ body {
 }
 
 .quick-message {
+	position: fixed;
+	right: 20px;
+	top: 15px;
+}
+
+.quick-message button {
 	border: 1px solid #00aeef;
 	border-radius: 10px 10px;
 	background-color: #1d252e;
