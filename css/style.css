@@ -81,10 +81,37 @@ body {
 }
 .menu {
 	margin-top:	 20px;
+	cursor: pointer;
 }
+
+.show .menu {
+	width:24px;
+  height:20px;
+  box-sizing:border-box;
+  padding-left: 200px;
+  /*width of the image*/
+  background: url("../imgs/close.png") left top no-repeat;
+}
+
+.show .dropdown-menu {
+	background-color: #e8ecef;
+	width: 360px;
+	margin-left: -16px;
+	border-radius: 0 !important;
+	margin-top: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.dropdown-menu a {
+	height: 50px;
+	padding-top: 10px;
+}
+
 
 .search-bar {
 	margin-top: 15px;
+	margin-left: 0px;
 	color: white;
 }
 
@@ -143,6 +170,7 @@ body {
 }
 
 .friends-list li {
+	padding-top: 21px;
 	height: 100px;
 	border-bottom: 1px solid #313a42;
 }
@@ -220,6 +248,14 @@ body {
 	padding-top: 20px;
 	margin-left: 35px;
 	margin-right: 20px;
+}
+
+.chat-name {
+	font-weight: bold;
+}
+
+.status {
+
 }
 
 .chat-type {
