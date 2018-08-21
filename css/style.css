@@ -54,7 +54,6 @@ body {
 	width: 360px !important;
 	max-width: 360px !important;
 	flex: none !important;
-	height: 867px;
 	border-right: 4px solid #212830;
 }
 
@@ -283,10 +282,12 @@ body {
 .chat-phone {
 	border-right: solid 1px #9c9fa3;
 	padding-right: 20px;
+	color: #9c9fa3;
 }
 
 .chat-video {
 	padding-left: 20px;
+	color: #9c9fa3;
 }
 
 .chat-board .quick-message {
@@ -607,6 +608,10 @@ body {
 	color: white
 }
 
+.add-quick-message a {
+	color: white;
+}
+
 
 .type-quick-message {
 	margin: 0px 20px;
@@ -655,12 +660,12 @@ body {
 	border-bottom: 1px solid #222a32;
 }
 
-.more-add span {
+.more-add a {
 	font-size: 8px;
 	margin-top: 10px;
 	color: white;
 }
 
-.more-add span i {
+.more-add a i {
 	padding-left: 3px;
 }
