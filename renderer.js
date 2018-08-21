@@ -25,23 +25,27 @@ function onMenuClose() {
 	currectSidebar.hide()
 }
 
-const electron = require('electron');
-let {ipcRenderer} = electron;
+const electron = require('electron')
+const remote = electron.remote
+
+const {ipcRenderer} = require('electron');
 let btn = document.getElementById('quick-message');
 btn.addEventListener('click', function (e) {
+	var status = $('#quick-message').attr('show')
+	if (status == 'true')
+		return;
     e.preventDefault();
-    ipcRenderer.send('resize', 600, 800);
+    var contents = remote.getCurrentWindow().webContents.getOwnerBrowserWindow().getBounds();
+    ipcRenderer.send('resize', contents.width + 345, contents.height);
+    $('.quick-message-board').show();
+    $('#quick-message').attr('show', true)
+	$('.chat-board .quick-message').css('right', '365px')
+	$('.chat-box').css('right', '345px')
+	$('.chat-type').css('right', '545px')
+	$('.chat-board').css('right', '345px')
+	$('.chat-contents').css('right', '365px')
 });
 
-// function onQuickMessage() {
-// 	$('.chat-board .quick-message').css('right', '365px')
-// 	$('.chat-box').css('right', '345px')
-// 	$('.chat-type').css('right', '545px')
-// 	$('.chat-board').css('right', '345px')
-// 	$('.chat-contents').css('right', '365px')
-
-// 	ipcRenderer.send('resize', 600, 800);
-// }
 
 $('img.menu-close').on('click', onMenuClose)
 

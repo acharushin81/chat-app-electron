@@ -71,6 +71,10 @@ body {
 	.menu {
 		/*z-index: 99999999;*/
 	}
+
+	.chat-contents {
+		left: 20px !important;
+	}
 }
 
 .navigation {
@@ -564,4 +568,88 @@ body {
 .quick-message-board {
 	width: 345px;
 	background-color: #262f38;
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	color: #d2d2d2;
+	display: none;
+}
+
+.quick-message-close {
+	color: #d2d2d2;
+	font-size: 40px;
+	margin-right: 10px;
+}
+
+
+.add-quick-message-button {
+	width: 56px;
+	height: 56px;
+	margin: 0 auto;
+	background-color: #0084ff;
+	font-size: 32px;
+}
+
+.add-quick-message-button i {
+	margin-top: 15px;
+	color: white
+}
+
+
+.type-quick-message {
+	margin: 0px 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #222a32;
+}
+
+.type-quick-message textarea {
+	margin-top: 15px;
+
+}
+
+
+.type-quick-message button {
+	margin-top: 10px;
+	border-radius: 12px 12px;
+	min-width: 100px;
+}
+
+.type-quick-message .save {
+	color: #d2d2d2;
+}
+
+.type-quick-message .button-color {
+	background-color: #ebebeb;
+	border: none;
+	color: #2b323b;
+}
+
+.quick-message-control {
+	background-color: transparent;
+	border: 1px solid #194d7d;
+	border-radius: 10px;
+}
+
+.quick-message-control:focus {
+	background-color: transparent;
+	color: #d2d2d2;
+}
+
+.more-add {
+	margin: 0px 20px;
+	margin-top: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #222a32;
+}
+
+.more-add span {
+	font-size: 8px;
+	margin-top: 10px;
+	color: white;
+}
+
+.more-add span i {
+	padding-left: 3px;
 }

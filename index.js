@@ -46,10 +46,8 @@ app.on('activate', function () {
   }
 })
 
-const electron = require('electron');
+const {ipcMain} = require('electron');
 
-let {ipcRenderer} = electron;
-ipcRenderer.on('resize', function (e, x, y) {
-  alert('b');
+ipcMain.on('resize', function (e, x, y) {
   mainWindow.setSize(x, y);
 });
