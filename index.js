@@ -45,3 +45,11 @@ app.on('activate', function () {
     createWindow()
   }
 })
+
+const electron = require('electron');
+
+let {ipcRenderer} = electron;
+ipcRenderer.on('resize', function (e, x, y) {
+  alert('b');
+  mainWindow.setSize(x, y);
+});

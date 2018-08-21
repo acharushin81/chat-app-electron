@@ -12,7 +12,7 @@
 <body>
   <div class="container-fluid pl-0">
     <div class="row">
-      <div class="left-menu pr-0">
+      <div id="main-sidebar" class="left-menu pr-0">
         <div class="navigation pr-3">
           <div class="row">
             <div class="col-2">
@@ -20,7 +20,7 @@
                 <img class="menu" src="imgs/menu.png">
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">
+                <a id="profile" class="dropdown-item" href="#">
                   <div class="row">
                     <div class="col-3 text-center">
                       <img src="imgs/profile.png">
@@ -30,7 +30,7 @@
                     </div>
                   </div>
                 </a>
-                <a class="dropdown-item" href="#">
+                <a id="group" class="dropdown-item" href="#">
                   <div class="row">
                     <div class="col-3 text-center">
                       <img src="imgs/group.png">
@@ -40,7 +40,7 @@
                     </div>
                   </div>
                 </a>
-                <a class="dropdown-item" href="#">
+                <a id="contacts" class="dropdown-item" href="#">
                   <div class="row">
                     <div class="col-3 text-center">
                       <img src="imgs/contact.png">
@@ -50,7 +50,7 @@
                     </div>
                   </div>
                 </a>
-                <a class="dropdown-item" href="#">
+                <a id="settings" class="dropdown-item" href="#">
                   <div class="row">
                     <div class="col-3 text-center">
                       <img src="imgs/settings.png">
@@ -60,7 +60,7 @@
                     </div>
                   </div>
                 </a>
-                <a class="dropdown-item" href="#">
+                <a id="about" class="dropdown-item" href="#">
                   <div class="row">
                     <div class="col-3 text-center">
                       <img src="imgs/about.png">
@@ -112,6 +112,162 @@
           </ul>
         </div>
       </div>
+
+
+      <div id="profile-sidebar" class="left-menu pr-0">
+        <div class="navigation pr-3 sidebar">
+          <div class="row">
+            <div class="col-2">
+              <a class="btn ml-3">
+                <img class="menu menu-close" src="imgs/close.png">
+              </a>
+            </div>
+            <div class="col-10 text-center">
+              <img class="logo" src="imgs/logo.png">
+            </div>
+          </div>
+        </div>
+        <div class="white-panel">
+          <div class="profile-avatar ">
+            <div class="text-center">
+              <img width="126px" height="126px" src="imgs/profile-avatar.png" class="rounded-circle">
+              <br><br>
+              <span class="profile-name">Kirsten Mckellar</span>
+              <br>
+              <span class="profile-location">Cape Town, RSA</span>
+            </div>
+          </div>
+          <div class="profile-panel">
+            <div class="profile-item">
+              <div class="row">
+                <div class="col-10">
+                  <span>Type your status</span>
+                </div>
+                <div class="col-2 profile-edit">
+                  <span>
+                    <i class="fa fa-pencil"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="mt-1">
+                <span class="profile-content">
+                  I didn't change, I just grew up. You should try it once.
+                </span>
+              </div>
+            </div>
+            <div class="profile-item">
+              <div class="row">
+                <div class="col-10">
+                  <span>Birthday</span>
+                </div>
+                <div class="col-2 profile-edit">
+                  <span>
+                    <i class="fa fa-pencil"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="mt-1">
+                <span class="profile-content">
+                  03/08/1988
+                </span>
+              </div>
+            </div>
+            <div class="profile-item">
+              <div class="row">
+                <div class="col-10">
+                  <span>Country</span>
+                </div>
+                <div class="col-2 profile-edit">
+                  <span>
+                    <i class="fa fa-pencil"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="mt-1">
+                <span class="profile-content">
+                  Cape Town
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="settings-sidebar" class="left-menu pr-0">
+        <div class="navigation pr-3 sidebar">
+          <div class="row">
+            <div class="col-2">
+              <a class="btn ml-3">
+                <img class="menu menu-close" src="imgs/close.png">
+              </a>
+            </div>
+            <div class="col-10 text-center">
+              <img class="logo" src="imgs/logo.png">
+            </div>
+          </div>
+        </div>
+        <div class="white-panel">
+          <div class="settings-font-size settings-item">
+            <span class="settings-title">Font Size</span>
+            <div class="dropdown">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                24pt
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">16pt</a>
+                <a class="dropdown-item" href="#">24pt</a>
+                <a class="dropdown-item" href="#">32pt</a>
+              </div>
+            </div>
+          </div>
+          <div class="settings-camera settings-item">
+            <span class="settings-title">Video</span>
+            <br>
+            <span class="settings-camera-status">No device is found</span>
+            <br>
+            <span class="settings-camera-desc">Somja Chat can't find a camera attached to your device</span>
+          </div>
+          <div class="settings-theme settings-item">
+            <span class="settings-title">Change theme color</span>
+            <div class="settings-theme-current">
+              <div class="rounded-0"></div>
+              <span >Current theme</span>
+            </div>
+            <div class="settings-theme-colors">
+              <ul>
+                <li><div class="rounded-0" style="background-color: #ff00ff"></div></li>
+                <li><div class="rounded-0" style="background-color: #ec008c"></div></li>
+                <li><div class="rounded-0" style="background-color: #5856d6"></div></li>
+                <li><div class="rounded-0" style="background-color: #2e3192"></div></li>
+                <li><div class="rounded-0" style="background-color: #f9cf00"></div></li>
+                <li><div class="rounded-0" style="background-color: #ff3b30"></div></li>
+                <li><div class="rounded-0" style="background-color: #47c9af"></div></li>
+                <li><div class="rounded-0" style="background-color: #4cd964"></div></li>
+                <li><div class="rounded-0" style="background-color: #004a80"></div></li>
+                <li><div class="rounded-0" style="background-color: #00aeef"></div></li>
+                <li><div class="rounded-0" style="background-color: #af7ac4"></div></li>
+                <li><div class="rounded-0" style="background-color: #f26c4f"></div></li>
+              </ul>
+            </div>
+          </div>
+          <div class="settings-send-button settings-item">
+            <span class="settings-title">Change Send Button</span>
+            <div class="settings-button">
+              <img src="imgs/button1.png">
+              <span>Image Style Button</span>
+            </div>
+            <div class="settings-button">
+              <img src="imgs/button2.png">
+              <span>Icon Style Button</span>
+            </div>
+            <div class="settings-button">
+              <img src="imgs/button3.png">
+              <span>Color Style Button</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="chat-board">
         <div class="row chat-status">
             <span class="chat-name">Kiresten Mckellar</span>
@@ -121,7 +277,7 @@
             <span class="chat-video"><i class="fa fa-video-camera"></i></span>
           </div>
           <div class="quick-message float-right">
-            <button type="button" class="btn quick-message">Quick Message&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></button>
+            <button type="button" id="quick-message" class="btn">Quick Message&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></button>
           </div>
         </div>
         <div class="chat-contents">
@@ -236,6 +392,8 @@
           </div>
         </div>
       </div>
+
+      <div class="quick-message-board"></div>
     </div>
   </div>
 
