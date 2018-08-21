@@ -154,14 +154,25 @@ body {
 	border-radius: 10px 10px;
 }
 
+.user-button {
+	background-color: #1d252e;
+	border: none;
+	border-right: 1px solid #00aeef;
+}
+
 .user-group-button button {
 	width: 129px;
 	height: 32px;
 	border-radius: 10px 10px;
-	/*border: 1px solid #00aeef;*/
-	border: none;
-	background-color: #1d252e;
+	
 	font-size: 13px;
+}
+
+
+
+.group-button {
+	background-color: #262f38;
+	border: none;
 }
 
 .friends-list {
@@ -174,7 +185,6 @@ body {
 }
 
 .friends-list li {
-	padding-top: 21px;
 	height: 100px;
 	border-bottom: 1px solid #313a42;
 }
@@ -580,6 +590,7 @@ body {
 	color: #d2d2d2;
 	font-size: 40px;
 	margin-right: 10px;
+	cursor: pointer;
 }
 
 

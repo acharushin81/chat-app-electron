@@ -46,7 +46,38 @@ btn.addEventListener('click', function (e) {
 	$('.chat-contents').css('right', '365px')
 });
 
+function onQuickMessageClose() {
+	var contents = remote.getCurrentWindow().webContents.getOwnerBrowserWindow().getBounds();
+    ipcRenderer.send('resize', contents.width - 345, contents.height);
 
+	$('.quick-message-board').hide();
+	$('#quick-message').attr('show', false)
+	$('.chat-board .quick-message').css('right', '20px')
+	$('.chat-box').css('right', '0px')
+	$('.chat-type').css('right', '200px')
+	$('.chat-board').css('right', '0px')
+	$('.chat-contents').css('right', '25px')
+}
+
+function onUser() {
+
+	$('.user-button').css('background-color', '#1d252e')
+	$('.group-button').css('background-color', '#262f38')
+	$('.user-button').css('border-right', '1px solid #00aeef')
+	$('.group-button').css('border-left', 'none')
+}
+
+function onGroup() {
+	$('.group-button').css('background-color', '#1d252e');
+	$('.user-button').css('background-color', '#262f38');
+	$('.group-button').css('border-left', '1px solid #00aeef')
+	$('.user-button').css('border-right', 'none')
+}
+
+$('.user-button').on('click', onUser)
+$('.group-button').on('click', onGroup)
+
+$('.quick-message-close').on('click', onQuickMessageClose)
 $('img.menu-close').on('click', onMenuClose)
 
 $('#profile').on('click', onProfile)
@@ -54,4 +85,3 @@ $('#group').on('click', onProfile)
 $('#contacts').on('click', onProfile)
 $('#settings').on('click', onSettings)
 $('#about').on('click', onProfile)
-// $('.quick-message button').on('click', onQuickMessage)
