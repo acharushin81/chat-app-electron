@@ -1,3 +1,4 @@
+
 div.callout {
 	background-color: #fff;
 	background-image: -moz-linear-gradient(top, #fff, #fff);
@@ -37,7 +38,6 @@ div.callout {
 
 
 body {
-	background-color: #1d252e;
 	min-width: 600px;
 }
 
@@ -54,12 +54,14 @@ body {
 	width: 360px !important;
 	border-right: 4px solid #212830;
 }
-.dropdown-toggle::before {
+.menu.dropdown-toggle::before , .list-more.dropdown-toggle::before , #quick-message-list .dropdown-toggle::before{
 	display: none !important;
 }
-.dropdown-toggle::after {
+
+.menu.dropdown-toggle::after , .list-more.dropdown-toggle::after {
 	display: none !important;
 }
+
 @media only screen and 
 (max-width: 910px) {
 	.left-menu {
@@ -183,6 +185,8 @@ body {
 .friends-list {
 	padding: 0;
 	border-top: 1px solid #313a42;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .friends-list ul {
@@ -452,18 +456,8 @@ background: #88ba1c;
 
 .send-button {
 	display: inline-block;
-	width: 75px;
-	height: 75px;
-	border-radius: 37px 37px 37px 37px;
-	background-color: #626e7b;
 	border: none;
 
-}
-
-.send-button img {
-	margin-top: 22px;
-	font-size: 40px;
-	
 }
 
 .send-button span i {
@@ -481,6 +475,8 @@ background: #88ba1c;
 	left: 0px;
 	width: 360px;
 	background-color: #e8ecef;
+	overflow-y: auto;
+	overflow-x: hidden;	
 }
 
 .profile-avatar {
@@ -632,6 +628,8 @@ background: #88ba1c;
 	bottom: 0px;
 	color: #d2d2d2;
 	display: none;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .quick-message-close {
@@ -669,14 +667,14 @@ background: #88ba1c;
 
 .type-quick-message textarea {
 	margin-top: 15px;
-
+	color: white;
 }
 
 
 .type-quick-message button {
 	margin-top: 10px;
 	border-radius: 12px 12px;
-	min-width: 100px;
+	width: 90px;
 }
 
 .type-quick-message .save {
@@ -697,7 +695,17 @@ background: #88ba1c;
 
 .quick-message-control:focus {
 	background-color: transparent;
-	color: #d2d2d2;
+	color: white;
+}
+
+#quick-message-list .dropdown-toggle {
+	font-size: 8px !important;
+	color: white !important	;
+	margin-top: 10px;
+}
+
+#quick-message-list .dropdown-toggle i {
+	padding-left: 3px;
 }
 
 .more-add {
@@ -708,11 +716,13 @@ background: #88ba1c;
 }
 
 .more-add a {
-	font-size: 8px;
-	margin-top: 10px;
-	color: white;
+	font-size: 15px;
+	/*color: white;*/
 }
 
-.more-add a i {
-	padding-left: 3px;
+
+
+.form-control:disabled, .form-control[readonly] {
+     background-color: transparent; 
+     opacity: 100; 
 }
