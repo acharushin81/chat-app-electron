@@ -1,0 +1,67 @@
+.emotions {
+    width: 20px;
+    height: 20px;
+    background: url("../imgs/icq/blank.gif") no-repeat center center;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.emo-angel {
+    background: url("../imgs/icq/angel.gif");
+}
+
+.emo-confused {
+    background: url("../imgs/icq/confused.gif");
+}
+
+.emo-devil {
+    background: url("../imgs/icq/devil.gif");
+}
+
+.emo-grin {
+    background: url("../imgs/icq/grin.gif");
+}
+
+.emo-heart {
+    background: url("../imgs/icq/heart.gif");
+}
+
+.emo-kiss {
+    background: url("../imgs/icq/kiss.gif");
+}
+
+.emo-smile {
+    background: url("../imgs/icq/smile.gif");
+}
+
+.emo-sunglasses {
+    background: url("../imgs/icq/sunglasses.gif");
+}
+
+.emo-unsure {
+    background: url("../imgs/icq/unsure.gif");
+}
+
+.emo-wink {
+    background: url("../imgs/icq/wink.gif");
+}
+
+.emo-cry {
+    background: url("../imgs/icq/cry.gif");
+}
+
+.emo-glasses {
+    background: url("../imgs/icq/glasses.gif");
+}
+
+.emo-grumpy {
+    background: url("../imgs/icq/grumpy.gif");
+}
+
+.emo-tongue {
+    background: url("../imgs/icq/tongue.gif");
+}
+
+.emo-frown {
+    background: url("../imgs/icq/frown.gif");
+}

@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>SOMJA</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="awesomplete.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css" />
-
+    <link rel="stylesheet" type="text/css" href="css/jquery.emotions.icq.css" />
 </head>
 <body>
   <div class="container-fluid pl-0">
@@ -15,9 +16,9 @@
       <div id="main-sidebar" class="left-menu pr-0">
         <div class="navigation pr-3">
           <div class="row">
-            <div class="col-2">
-              <a class="btn dropdown-toggle ml-3" data-toggle="dropdown">
-                <img class="menu" src="imgs/menu.png">
+            <div class="col-2 dropdown">
+              <a class="menu dropdown-toggle ml-3" data-toggle="dropdown">
+                <img src="imgs/menu.png">
               </a>
               <div class="dropdown-menu">
                 <a id="profile" class="dropdown-item" href="#">
@@ -37,16 +38,6 @@
                     </div>
                     <div class="col-9">
                       <span>New Group</span>
-                    </div>
-                  </div>
-                </a>
-                <a id="contacts" class="dropdown-item" href="#">
-                  <div class="row">
-                    <div class="col-3 text-center">
-                      <img src="imgs/contact.png">
-                    </div>
-                    <div class="col-9">
-                      <span>Contacts</span>
                     </div>
                   </div>
                 </a>
@@ -80,7 +71,7 @@
             <span class="search-icon">
               <i class="fa fa-search" aria-hidden="true"></i>
             </span>
-            <input type="text" class="form-control" placeholder="Search" />
+            <input id="search-input" class="awesomplete form-control" type="text" placeholder="Search" data-list="" />
           </div>
           <div class="row user-group-button">
             <div>
@@ -103,8 +94,13 @@
                   <span class="list-name">Kirsten Mckellar</span><br>
                   <span class="list-desc">Where is the nearest place to...</span>
                 </div>
-                <div class="col-2 text-right">
-                  <span class="list-more"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></span>
+                <div class="person-option col-2 text-right dropdown dropleft">
+                  <div class="dropdown-toggle list-more" data-toggle="dropdown"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></div>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">create group</a>
+                    <a class="dropdown-item" href="#">block</a>
+                    <a class="dropdown-item" href="#">delete</a>
+                  </div>
                   <span class="list-time">2min</span>
                 </div>
               </div>
@@ -118,11 +114,16 @@
                   <img src="imgs/avatar.png" />
                 </div>
                 <div class="col-7">
-                  <span class="list-name">Kirsten Mckellar</span><br>
-                  <span class="list-desc">Where is the nearest place to...</span>
+                  <span class="list-name">Alexander Charushin</span><br>
+                  <span class="list-desc">How can I meet you?</span>
                 </div>
-                <div class="col-2 text-right">
-                  <span class="list-more"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></span>
+                <div class="person-option col-2 text-right dropdown dropleft">
+                  <div class="dropdown-toggle list-more" data-toggle="dropdown"><i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></div>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">create group</a>
+                    <a class="dropdown-item" href="#">block</a>
+                    <a class="dropdown-item" href="#">delete</a>
+                  </div>
                   <span class="list-time">2min</span>
                 </div>
               </div>
@@ -135,7 +136,7 @@
         <div class="navigation pr-3 sidebar">
           <div class="row">
             <div class="col-2">
-              <a class="btn ml-3">
+              <a class="ml-3 mt-2">
                 <img class="menu menu-close" src="imgs/close.png">
               </a>
             </div>
@@ -161,13 +162,14 @@
                   <span>Type your status</span>
                 </div>
                 <div class="col-2 profile-edit">
-                  <a href="#">
+                  <a href="#" class="profile-content-button">
                     <i class="fa fa-pencil"></i>
                   </a>
                 </div>
               </div>
               <div class="mt-1">
-                <span class="profile-content">
+                <input type="text" class="profile-content-input" style="display: none;width: 100%" />
+                <span class="profile-content status">
                   I didn't change, I just grew up. You should try it once.
                 </span>
               </div>
@@ -178,13 +180,13 @@
                   <span>Birthday</span>
                 </div>
                 <div class="col-2 profile-edit">
-                  <a href="#">
+                  <a href="#" class="profile-birthday-button">
                     <i class="fa fa-pencil"></i>
                   </a>
                 </div>
               </div>
               <div class="mt-1">
-                <span class="profile-content">
+                <span class="profile-content birthday">
                   03/08/1988
                 </span>
               </div>
@@ -195,13 +197,13 @@
                   <span>Country</span>
                 </div>
                 <div class="col-2 profile-edit">
-                  <a href="#">
+                  <a href="#" class="profile-edit-button"> 
                     <i class="fa fa-pencil"></i>
                   </a>
                 </div>
               </div>
               <div class="mt-1">
-                <span class="profile-content">
+                <span class="profile-content city">
                   Cape Town
                 </span>
               </div>
@@ -214,7 +216,7 @@
         <div class="navigation pr-3 sidebar">
           <div class="row">
             <div class="col-2">
-              <a class="btn ml-3">
+              <a class="ml-3">
                 <img class="menu menu-close" src="imgs/close.png">
               </a>
             </div>
@@ -393,15 +395,35 @@
         <div class="chat-box">
           <div class="row chat-box-container">
             <div class="col-1 attachment-icon">
-              <a href="#">
+              <input type="file" id="attachment" style="display: none;" />
+              <a href="#" class="attachment-file">
                 <img src="imgs/attachment.png">
               </a>
             </div>
-            <div class="col-7 chat-input">
+            <div class="col-8 chat-input">
               <input type="text" class="form-control" placeholder="Type your message..." />
             </div>
-            <div class="col-4 text-right">
-              <a class="smile-icon" href="#"><i class="fa fa-smile-o" aria-hidden="true"></i></a>
+            <div class="chat-button">
+              <div class="txt">o:) o.O 3:) :D <3 :* :) 8| :/ ;) :'( :( 8) >:( :p</div>
+              <div class="dropdown droptop">
+                  <div class="dropdown-toggle" data-toggle="dropdown">
+                    <a class="smile-icon" href="#"><i class="fa fa-smile-o" aria-hidden="true"></i></a>
+                  </div>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">o:)</a>
+                    <a class="dropdown-item" href="#">o.O</a>
+                    <a class="dropdown-item" href="#">3:)</a>
+                    <a class="dropdown-item" href="#">:*</a>
+                    <a class="dropdown-item" href="#">:D</a>
+                    <a class="dropdown-item" href="#"><3</a>
+                    <a class="dropdown-item" href="#">:)</a>
+                    <a class="dropdown-item" href="#">8|</a>
+                    <a class="dropdown-item" href="#">:/</a>
+                    <a class="dropdown-item" href="#">;)</a>
+                    <a class="dropdown-item" href="#">:'(</a>
+                  </div>
+                  <span class="list-time">2min</span>
+              </div>
               <a href="#" class="send-button text-center"><img src="imgs/send.png"></a>
             </div>
           </div>
@@ -446,6 +468,11 @@
 
   <script type="text/javascript">
     require('./renderer.js');  
+  </script>
+  <script src="awesomplete.js" async></script>
+  <script src="js/jquery.emotions.js"></script>
+  <script type="text/javascript">
+    $(".txt").emotions();
   </script>
 </body>
 </html>

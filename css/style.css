@@ -52,11 +52,14 @@ body {
 	bottom: 0;
 	background-color: #262f38;
 	width: 360px !important;
-	max-width: 360px !important;
-	flex: none !important;
 	border-right: 4px solid #212830;
 }
-
+.dropdown-toggle::before {
+	display: none !important;
+}
+.dropdown-toggle::after {
+	display: none !important;
+}
 @media only screen and 
 (max-width: 910px) {
 	.left-menu {
@@ -87,29 +90,27 @@ body {
 	cursor: pointer;
 }
 
-#main-sidebar .show .menu {
-	width:24px;
-  	height:20px;
-  	box-sizing:border-box;
-  	padding-left: 200px;
-  	/*width of the image*/
-  	background: url("../imgs/close.png") left top no-repeat;
+.menu-close {
+	margin-top: 23px;
 }
 
-#main-sidebar .show .dropdown-menu {
-	background-color: #e8ecef;
+.navigation .dropdown {
+	margin-top: 20px;
+}
+
+
+.navigation .dropdown-menu {
+	top: 20px !important;
+	left: -16px !important;
 	width: 360px;
-	margin-left: -16px;
-	border-radius: 0 !important;
-	margin-top: 10px;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 25px;
+	padding-bottom: 25px;
 }
 
-#main-sidebar .dropdown-menu a {
-	height: 50px;
-	padding-top: 10px;
+.navigation .dropdown-menu a {
+	margin-top: 10px;
 }
+
 
 
 .search-bar {
@@ -132,14 +133,19 @@ body {
   	z-index: 999;
 }
 
+.awesomplete {
+	margin-left: 20px;
+}
+
 .navigation input {
-	width: 90%;
+	width: 300px;
 	padding-left: 65px;
 	margin: 0 auto;
 	height: 40px;
 	border-radius: 40px 40px 40px 40px;
 	background-color: #363d45;
 	border: none;
+	color: white;
 }
 
 .user-group-button {
@@ -188,9 +194,17 @@ body {
 	border-bottom: 1px solid #313a42;
 }
 
+.friends-list li.selected {
+	background-color: #363d45;
+}
+
 .friends-list li:hover {
 	cursor: pointer;
 	background-color: #2b80ff;
+}
+
+.friends-list li .list-more {
+	height: 20px;
 }
 
 .list-active {
@@ -306,11 +320,34 @@ body {
 .chat-contents {
 	position: fixed;
 	top: 80px;
-	left: 410px;
-	right: 20px;
-	bottom: 200px;
+	left: 396px;
+	right: 0px;
+	bottom: 130px;
 	font-family: 'robotolight';
+	overflow-y: auto;
+	overflow-x: hidden;
 }
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 12px;
+height: 12px;
+}
+
+::-webkit-scrollbar-track {
+border: 1px solid yellowgreen;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+background: yellowgreen;  
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #88ba1c;  
+}
+
 .chat-avatar {
 	width: 35px;
 	padding-top: 4px;
@@ -322,7 +359,7 @@ body {
 }
 
 .chat-content {
-	padding: 5px 0;
+	padding: 5px 15px;
 }
 
 .chat-content.float-right {
@@ -389,18 +426,28 @@ body {
 	box-shadow: none !important;
 }
 
+.chat-button {
+
+}
+
+
 .attachment-icon img {
   	margin-top: 35px;
   	margin-left: 20px;
 }
 
-
 .smile-icon {
 	color: #aeb1b4;
 	font-size: 50px;
-	
-	position: relative;
-	top: 23px;
+	position: fixed;
+	right: 130px;
+	bottom: 20px;
+}
+
+.send-button {
+	position: fixed;
+	right: 30px;
+	bottom: 20px;
 }
 
 .send-button {
